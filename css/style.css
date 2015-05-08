@@ -1,0 +1,344 @@
+/*--------General-------*/
+
+/* Remove defaults */
+html, body, h1, h2, h3, p, ul, ol, li {
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+/*--------Layout-------*/
+
+body {
+    margin: 0 auto;
+}
+
+.main {
+    width: 100%;
+    position: relative;
+}
+
+.panel {
+    padding: 1em;
+    display: block;
+}
+
+#row1 div.panel {
+    height: 16em;
+}
+
+/* Pie chart in Pending Check-Ins */
+div#today-donut svg {
+    width: 15em;
+    height: 15em;
+}
+
+/* Welcome Area */
+.panel#main {
+    background: none;
+    border: none;
+}
+
+/* Tables */
+table {
+    width: 100%;
+}
+
+table {
+    background: none;
+    border: none;
+}
+
+table tr th, table tr td {
+    padding: 0.25em;
+    margin: 0.5em;
+    background: none;
+}
+
+tr {
+    vertical-align: top;
+}
+
+/* Patient names for Appointment Reminders section */
+.panel#appointments tr {
+    vertical-align: middle;
+}
+
+li.tab-title {
+    padding: 0;
+    margin: 0;
+}
+
+li.tab-title a {
+    height: 0;
+}
+
+/*--------Nav-------*/
+
+nav {
+    width: 100%;
+    padding-left: 1em;
+    text-transform: uppercase;
+    padding-bottom: 3.5em;
+}
+
+nav span.h1 {
+    color: #ff6400;
+    padding-left: 1em;
+}
+
+/*--------Typeface-------*/
+
+header {
+    font-family: Roboto, sans-serif;
+    font-size: 12pt;
+}
+
+h1 {
+    font-family: Roboto, sans-serif;
+    color: #000000;
+    font-size: 12pt;
+}
+
+p, span, li {
+    font-family: Roboto, sans-serif;
+    color: rgb(100, 100, 100);
+    font-size: 10pt;
+}
+
+span.emphasis {
+    font-weight: 900;
+    letter-spacing: 0.5px;
+}
+
+table tr th, table tr td {
+    font-family: Roboto, sans-serif;
+    color: rgb(100, 100, 100);
+    font-size: 10pt;
+}
+
+h1, h2, h3 {
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 1em;
+    margin: 1.5rem auto;
+}
+
+h3 {
+    font-size: 0.8em;
+    margin: 0;
+    padding-bottom: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+div.panel h4 {
+    font-size: 0.6em;
+    text-align: center;
+    letter-spacing: 2pt;
+    text-transform: uppercase;
+    color: rgb(150,150,150);
+}
+
+span.inlineh3 {
+    font-size: 0.8em;
+    margin: 0;
+    padding-bottom: 0;
+    letter-spacing: 1pt;
+    text-transform: uppercase;
+}
+
+/* Hyperlinks */
+a:link {
+    color: rgb(100, 100, 100);
+}
+
+a:visited {
+    color: rgb(100, 100, 100);
+}
+
+a:hover {
+    color: rgb(100, 100, 100);
+}
+
+a:active {
+    color: rgb(100, 100, 100);
+}
+
+/* Modals */
+.reveal-modal .row {
+    width: 100%;
+}
+
+.tableRight {
+    float: right;
+    margin: 0 auto;
+}
+
+/* Welcome Panel Typeface */
+.panel#main h2 {
+    margin-bottom: .5em;
+    font-size: 2em;
+    font-weight: 200;
+    text-align: center;
+}
+
+.panel#main p, .panel#main span.emphasis {
+    font-size: 12pt;
+    font-weight: 300;
+    margin: 0;
+}
+
+div#main.panel span.emphasis {
+    color: #ff6400;
+    font-weight: 400;
+}
+
+.panel#main li {
+    margin-left: 2em;
+}
+
+.panel#main .important {
+    padding: 0;
+    font-size: 2em;
+    font-weight: 500;
+    color: #ff6400;
+}
+
+/*--------Buttons-------*/
+div.button {
+    display: block;
+    font-size: 9pt;
+    padding: 0.5em;
+    width: 5em;
+    margin: 0 auto;
+}
+
+button:hover, button:focus, .button:hover, .button:focus {
+    background-color: rgb(150,150,150);
+}
+
+div .more .button {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    font-size: 7pt;
+    padding: 0.2em;
+    width: auto;
+    background-color: black;
+}
+
+/*--------Bullet Icons-------*/
+
+li.heart {
+    list-style-image: url('https://dl.dropboxusercontent.com/u/11031473/heart-rate.svg');
+}
+
+li.temperature {
+    list-style-image: url('https://dl.dropboxusercontent.com/u/11031473/temperature.svg');
+}
+
+li.critical {
+    list-style-image: url('https://dl.dropboxusercontent.com/u/11031473/critical.svg');
+}
+
+li.stable {
+    list-style-image: url('https://dl.dropboxusercontent.com/u/11031473/stable.svg');
+}
+
+li.guarded {
+    list-style-image: url('https://dl.dropboxusercontent.com/u/11031473/guarded.svg');
+}
+
+th.bullet {
+    width: 4%;
+}
+
+th.icon {
+    width: 6%;
+}
+
+/*--------Percentage Bars In Welcome Area-------*/
+
+div.bar {
+    display: inline-block;
+    margin-right: .5em;
+    padding: 0;
+    width: 10px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div.bar#patients {
+    background-image: url('https://dl.dropboxusercontent.com/u/11031473/patients-percent.svg');
+}
+
+div.bar#doses {
+    background-image: url('https://dl.dropboxusercontent.com/u/11031473/doses-percent.svg');
+}
+
+/*--------Tabs-------*/
+
+ul.tabs h3 {
+    font-size: 8pt;
+    margin: 0;
+    line-height: 0;
+}
+
+div#check-ins.panel div.row {
+    height: 16em;
+}
+
+div#check-ins.panel .tabs dd > a, .tabs .tab-title > a {
+    font-size: 8pt;
+    margin: 0;
+    line-height: 0;
+    padding-left: 1em;
+    padding-right: 1em
+}
+
+.tabs dd > a, .tabs .tab-title > a {
+    background-color: #F9F9F9;
+}
+
+.tabs dd > a:hover, .tabs .tab-title > a:hover,
+.tabs dd.active a:hover, .tabs .tab-title.active a:hover {
+    background-color: rgba(255, 100, 0, 0.2);
+}
+
+.tabs dd.active a, .tabs .tab-title.active a {
+    background-color: rgba(255, 100, 0, 0.2);
+}
+
+/*--------Image Carousel-------*/
+
+.slick-prev:before, .slick-next:before {
+    color: #AAAAAA;
+}
+
+.labs img {
+    padding: 0.25em;
+}
+
+/*--------Calendar-------*/
+
+a .date-selector, a .time-selector {
+    font-size: 8pt;
+}
+
+/*--------Javascript-------*/
+
+.displayNone {
+    display: none;
+}

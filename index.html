@@ -1,0 +1,853 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Wellframe - Patient Dashboard</title>
+
+    <!--Zurb Foundation Base and Icons v3-->
+    <link rel="stylesheet" type="text/css" href="css/foundation.css"/>
+    <link rel="stylesheet" type="text/css" href="foundation-icon-fonts-3/foundation-icons.css"/>
+    <link rel="stylesheet" type="text/css" href="dist/css/vendor/normalize.css" media="screen"/>
+
+    <!--Foundation Calendar-->
+    <link rel="stylesheet" type="text/css" href="css/foundation_calendar.css"/>
+
+    <!--Image Carousel-->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+    <!--Donut Charts-->
+    <link rel="stylesheet" type="text/css" href="dist/css/pizza.css" media="screen, projector, print"/>
+
+    <!--Main Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+    <!--Fonts-->
+    <link rel="stylesheet" type="text/css"
+          href="http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic,900,900italic,100,100italic">
+    <link rel="stylesheet" type="text/css"
+          href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700">
+
+</head>
+<body>
+<header>
+    <nav class="top-bar" data-topbar role="navigation">
+        <ul class="title-area">
+            <li class="name">
+                <div>
+                    <img src="./img/wellframe-logo.png" align="middle"/><span class="h1">Patient Dashboard</span>
+                </div>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+            <!-- Right Nav Section -->
+            <ul class="right">
+                <li><a href="#">HELP</a></li>
+            </ul>
+        </section>
+    </nav>
+</header>
+<div class="main">
+<div class="row collapse">
+<div id="row1" class="row">
+<div class="large-4 columns">
+    <div id="patientlist" class="panel">
+        <h2>Patient List</h2>
+
+        <div class="large-2 columns">
+            <img src="img/patients.svg" align="middle">
+        </div>
+        <div class="large-10 columns">
+            <table>
+                <tr class="header">
+                    <th class="bullet">
+                    </td>
+                    <th width="30%"><h3>Name</h3>
+                    </td>
+                    <th><h3>Status</h3>
+                    </td>
+                    <th width="38%"><h3>Primary Diagnosis</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bullet"><a href="#" data-reveal-id="JackieC"><img src="img/critical.svg"></a></td>
+                    <td><a href="#" data-reveal-id="JackieC">Jackie C.</a></td>
+                    <td><a href="#" data-reveal-id="JackieC">Critical</a></td>
+                    <td><a href="#" data-reveal-id="JackieC">COPD</a></td>
+                </tr>
+                <tr>
+                    <td class="bullet"><img src="img/guarded.svg"></td>
+                    <td>Lindsay L.</td>
+                    <td>Guarded</td>
+                    <td>Congestive Heart Failure</td>
+                </tr>
+                <tr>
+                    <td class="bullet"><img src="img/guarded.svg"></td>
+                    <td>Maurice C.</td>
+                    <td>Guarded</td>
+                    <td>Leukemia</td>
+                </tr>
+            </table>
+            <div class="more">
+                <div id="morepatients" class="button">MORE &#187;</div>
+            </div>
+
+        </div>
+    </div>
+    <div id="patientlist2" style="display: none;" class="panel">
+        <h2>Patient List</h2>
+
+        <div class="large-2 columns">
+            <img src="img/patients.svg" align="middle">
+        </div>
+        <div class="large-10 columns">
+            <table>
+                <tr class="header">
+                    <th class="bullet">
+                    </td>
+                    <th width="30%"><h3>Name</h3>
+                    </td>
+                    <th><h3>Status</h3>
+                    </td>
+                    <th width="38%"><h3>Primary Diagnosis</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bullet"><a href="#" data-reveal-id="JackieC"><img src="img/critical.svg"></a></td>
+                    <td>Shelley l.</a></td>
+                    <td>Critical</a></td>
+                    <td>Angina</a></td>
+                </tr>
+                <tr>
+                    <td class="bullet"><img src="img/guarded.svg"></td>
+                    <td>Tammy K.</td>
+                    <td>Guarded</td>
+                    <td>Coronary Artery Disease</td>
+                </tr>
+                <tr>
+                    <td class="bullet"><img src="img/stable.svg"></td>
+                    <td>Clarence C.</td>
+                    <td>Stable</td>
+                    <td>Atrial Fibrillation</td>
+                </tr>
+            </table>
+            <div class="more">
+                <div id="patientsback" class="button">&#171; BACK</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="large-4 columns">
+    <div id="complaints" class="panel">
+        <h2>Patient Complaints</h2>
+
+        <div class="large-2 columns">
+            <img src="img/complaints.svg" align="middle">
+        </div>
+        <div class="row collapse">
+            <div class="large-10 columns">
+                <table>
+                    <tr class="header">
+                        <th width="20%"><h3>Time</h3>
+                        </td>
+                        <th class="bullet">
+                        </td>
+                        <th><h3>Complaint</h3>
+                        </td>
+                        <th width="30%"><h3>Primary Diagnosis</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>9:26 am</td>
+                        <td class="bullet"><img src="img/critical.svg"></td>
+                        <td>John J. is feeling <span class="emphasis">chest pain</span>.
+                        </td>
+                        <td>Heart Disease</td>
+                    </tr>
+                    <tr>
+                        <td>10:16 am</td>
+                        <td class="bullet"><img src="img/guarded.svg"></td>
+                        <td>Meredith S. is complaining of <span
+                                class="emphasis">shortness&nbsp;of&nbsp;breath</span>.
+                        </td>
+                        <td>Heart Valve Disease</td>
+                    </tr>
+                    <tr>
+                        <td>2:38 pm</td>
+                        <td class="bullet"><img src="img/guarded.svg"></td>
+                        <td>Stephen C. is complaining of <span class="emphasis">swelling</span> around his IV.</td>
+                        <td>Leukemia</td>
+                    </tr>
+                </table>
+                <div class="more">
+                    <div id="morecomplaints" class="button">MORE &#187;</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--This panel is displayed upon clicking MORE-->
+    <div id="complaints2" style="display: none;" class="panel">
+        <h2>Patient Complaints</h2>
+
+        <div class="large-2 columns">
+            <img src="img/complaints.svg" align="middle">
+        </div>
+        <div class="row collapse">
+            <div class="large-10 columns">
+                <div><h4>Thursday, May 7</h4></div>
+                <table>
+                    <tr class="header">
+                        <th width="20%"><h3>Time</h3>
+                        </td>
+                        <th class="bullet">
+                        </td>
+                        <th><h3>Complaint</h3>
+                        </td>
+                        <th width="30%"><h3>Primary Diagnosis</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>7:26 am</td>
+                        <td class="bullet"><img src="img/critical.svg"></td>
+                        <td>Jenny C. is experiencing <span class="emphasis">numbness</span>.
+                        </td>
+                        <td>Heart Disease</td>
+                    </tr>
+                    <tr>
+                        <td>9:56 pm</td>
+                        <td class="bullet"><img src="img/stable.svg"></td>
+                        <td>Meredith S. is feeling <span
+                                class="emphasis">fatigued</span>.
+                        </td>
+                        <td>COPD</td>
+                    </tr>
+                </table>
+                <div class="more">
+                    <div id="complaintsback" class="button">&#171; BACK</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="large-4 columns">
+    <div id="alerts" class="panel">
+        <h2>Alerts</h2>
+
+        <div class="large-2 columns">
+            <img src="img/alerts.svg" align="middle">
+        </div>
+        <div class="large-10 columns">
+            <table>
+                <tr>
+                    <th class="icon">
+                    </td>
+                    <th width="20%"><h3>Time</h3>
+                    </td>
+                    <th><h3>Alert</h3>
+                    </td>
+                    <th class="bullet">
+                    </td>
+                </tr>
+                <tr id="alert1">
+                    <td class="icon"><img src="img/heart-rate.svg"></td>
+                    <td>9:12 am</td>
+                    <td>Steve R.'s heart rate has set off his heart rate alarm and has increased to <span
+                            class="emphasis">125 bpm</span>.
+                    </td>
+                    <td><input type="checkbox" id="alert1done"></td>
+                </tr>
+                <tr id="alert2">
+                    <td class="icon"><img src="img/respiration.svg"></td>
+                    <td>10:27 am</td>
+                    <td>Samantha L.'s respiratory rate has increased to <span class="emphasis">25</span>
+                        respirations per minute.
+                    </td>
+                    <td><input type="checkbox" id="alert2done"></td>
+                </tr>
+            </table>
+            <div class="more">
+                <div id="morealerts" class="button">MORE &#187;</div>
+            </div>
+        </div>
+    </div>
+    <!--This panel is displayed upon clicking MORE-->
+    <div id="alerts2" style="display: none;" class="panel">
+        <h2>Alerts</h2>
+
+        <div class="large-2 columns">
+            <img src="img/alerts.svg" align="middle">
+        </div>
+        <div class="large-10 columns">
+            <div><h4>Thursday, May 7</h4></div>
+            <table>
+                <tr>
+                    <th class="icon">
+                    </td>
+                    <th width="20%"><h3>Time</h3>
+                    </td>
+                    <th><h3>Alert</h3>
+                    </td>
+                    <th class="bullet">
+                    </td>
+                </tr>
+                <tr id="alert3">
+                    <td class="icon"><img src="img/heart-rate.svg"></td>
+                    <td>1:52 pm</td>
+                    <td>Tara D.'s heart rate has set off his heart rate alarm and has dropped to <span
+                            class="emphasis">45 bpm</span>.
+                    </td>
+                    <td><input type="checkbox" id="alert3done"></td>
+                </tr>
+                <tr id="alert4">
+                    <td class="icon"><img src="img/temperature.svg"></td>
+                    <td>11:17 pm</td>
+                    <td>Ashley G.'s temperature has gone up to <span class="emphasis">102&deg;C</span>.</td>
+                    <td><input type="checkbox" id="alert4done"></td>
+                </tr>
+            </table>
+            <div class="more">
+                <div id="alertsback" class="button">&#171; BACK</div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<div class="row">
+    <div class="large-4 columns">
+        <div class="panel">
+            <h2>Medication Notifications</h2>
+
+            <div class="row">
+                <div class="large-2 columns">
+                    <img src="img/medications.svg" align="middle">
+                </div>
+                <div class="large-10 columns">
+                    <ul class="tabs" data-tab>
+                        <li class="tab-title active"><a href="#panel1"><h3>Rx Updates</h3></a></li>
+                        <li class="tab-title"><a href="#panel2"><h3>Missed Doses</h3></a></li>
+                    </ul>
+                    <div class="tabs-content">
+                        <div class="content active" id="panel1">
+                            <table>
+                                <tr id="rx1">
+                                    <td class="bullet"><img src="img/guarded.svg"></td>
+                                    <td>Ahmad D. has been prescribed <span class="emphasis">Lopressor</span>.</td>
+                                    <td class="bullet"><input type="checkbox" id="rx1done"></td>
+                                </tr>
+                                <tr id="rx2">
+                                    <td class="bullet"><img src="img/stable.svg"></td>
+                                    <td>Jackson F.'s <span class="emphasis">Zocor</span> dose has been <span
+                                            class="emphasis">increased</span> to 20&nbsp;mg per day.
+                                    </td>
+                                    <td class="bullet"><input type="checkbox" id="rx2done"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="content" id="panel2">
+                            <table>
+                                <tr id="doses1">
+                                    <td class="bullet"><img src="img/critical.svg"></td>
+                                    <td>Stephanie T. hasn't reported taking meds for <span
+                                            class="emphasis">5&nbsp;days</span>.
+                                    </td>
+                                    <td class="bullet"><input type="checkbox" id="doses1done"></td>
+                                </tr>
+                                <tr id="doses2">
+                                    <td class="bullet"><img src="img/guarded.svg"></td>
+                                    <td>William T. has missed his <span class="emphasis">2nd</span> dose.</td>
+                                    <td class="bullet"><input type="checkbox" id="doses2done"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="large-4 columns">
+        <div class="panel" id="main">
+            <h2>Welcome, Sandy!</h2>
+
+            <div class="row">
+                <div class="row collapse">
+                    <div class="large-4 large-offset-1 columns">
+                        <p>The <span class="emphasis">patients</span> you&nbsp;have followed up with:</p>
+
+                        <div class="bar" id="patients"></div>
+                        <span class="important">56&#37;</span>
+                    </div>
+                    <div class="large-4 columns">
+                        <p>The <span class="emphasis">doses</span> your patients have taken on time:</p>
+
+                        <div class="bar" id="doses"></div>
+                        <span class="important">78&#37;</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <!--<div class="button">Stats</div>-->
+            </div>
+        </div>
+    </div>
+    <div class="large-4 columns">
+        <div class="panel">
+            <h2>Results Review</h2>
+
+            <div class="row">
+                <div class="large-2 columns">
+                    <img src="img/results.svg" align="middle">
+                </div>
+                <div class="large-10 columns">
+                    <div class="labs">
+                        <div><img src="./img/lab1.gif" alt="Lab 1"/></div>
+                        <div><img src="./img/lab2.jpg" alt="Lab 2"/></div>
+                        <div><img src="./img/lab3.jpg" alt="MRI"/></div>
+                        <div><img src="./img/lab4.gif" alt="Urine"/></div>
+                        <div><img src="./img/lab1.gif" alt="Lab 1"/></div>
+                        <div><img src="./img/lab2.jpg" alt="Lab 2"/></div>
+                        <div><img src="./img/lab3.jpg" alt="MRI"/></div>
+                        <div><img src="./img/lab4.gif" alt="Urine"/></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="large-4 columns">
+        <div class="panel" id="appointments" data-equalizer-watch>
+            <h2>Appointment Reminders</h2>
+
+            <div class="row">
+                <div class="large-2 columns">
+                    <img src="img/appointments.svg" align="middle">
+                </div>
+                <div class="large-10 columns">
+                    <table>
+                        <tr>
+                            <th class="bullet">
+                            </td>
+                            <th width="28%"><h3>Name</h3>
+                            </td>
+                            <th><h3>Appointment</h3>
+                            </td>
+                            <th width="1%">
+                            </td>
+                        </tr>
+                        <tr id="reminder1">
+                            <td class="bullet"><img src="img/critical.svg"></td>
+                            <td>Daniel D.</a></td>
+                            <td><input id="appointment1" type="text" data-date-time data-date-format="%a, %B %e"
+                                       data-time-format="%l:%M %P" value="2015-05-11 09:15"/></td>
+                            <td><input type="checkbox" id="rem1done"></td>
+                        </tr>
+                        <tr id="reminder2">
+                            <td class="bullet"><img src="img/guarded.svg"></td>
+                            <td>
+                                <div class="labelAsBox">Manny R.</div>
+                            </td>
+                            <td><input id="appointment2" type="text" data-date-time data-date-format="%a, %B %e"
+                                       data-time-format="%l:%M %P" value="2015-05-11 13:20"/></td>
+                            <td><input type="checkbox" id="rem2done"></td>
+                        </tr>
+                        <tr id="reminder3">
+                            <td class="bullet"><img src="img/stable.svg"></td>
+                            <td>
+                                <div class="labelAsBox">Liza M.</div>
+                            </td>
+                            <td><input id="appointment3" type="text" data-date-time data-date-format="%a, %B %e"
+                                       data-time-format="%l:%M %P" value="2015-05-13 14:30:00"/></td>
+                            <td><input type="checkbox" id="rem3done"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="large-4 columns">
+        <div class="panel" id="check-ins">
+            <h2>Pending Check-Ins</h2>
+
+            <div class="row">
+                <div class="large-2 columns">
+                    <img src="img/check-ins.svg" align="middle">
+                </div>
+                <div class="large-10 columns">
+
+                    <ul class="tabs" data-tab>
+                        <li class="tab-title active" id="overviewtab"><a href="#panel3"><h3>Overview</h3></a></li>
+                        <li class="tab-title" id="todaytab"><a href="#panel4"><h3>Today</h3></a></li>
+                        <li class="tab-title" id="tomorrowtab"><a href="#panel5"><h3>Tomorrow</h3></a></li>
+                    </ul>
+                    <div class="tabs-content">
+                        <div class="content active" id="panel3">
+                            <div>
+                                <ul data-pie-id="today-donut" data-options='{"donut":"true"}' class="displayNone">
+                                    <li class="stable" data-value="60">Stable</li>
+                                    <li class="guarded" data-value="29">Guarded</li>
+                                    <li class="critical" data-value="11">Critical</li>
+                                </ul>
+                                <div id="today-donut"></div>
+                            </div>
+                        </div>
+                        <div class="content" id="panel4">
+                            <table>
+                                <tr id="today1">
+                                    <td class="bullet"><img src="img/critical.svg"></td>
+                                    <td>Anthony J. is due for his daily check-in.</td>
+                                    <td class="bullet"><input type="checkbox" id="today1done"></td>
+                                </tr>
+                                <tr id="today2">
+                                    <td class="bullet"><img src="img/stable.svg"></td>
+                                    <td>Lauren M. is due for her weekly check-in.</td>
+                                    <td class="bullet"><input type="checkbox" id="today2done"></td>
+                                </tr>
+                                <tr id="today3">
+                                    <td class="bullet"><img src="img/stable.svg"></td>
+                                    <td>Monica T. is due for her weekly check-in.</td>
+                                    <td class="bullet"><input type="checkbox" id="today3done"></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="content" id="panel5">
+                            <table>
+                                <tr id="tomorrow1">
+                                    <td class="bullet"><img src="img/guarded.svg"></td>
+                                    <td>Ryan T. is due for his daily check-in.</td>
+                                    <td class="bullet"><input type="checkbox" id="tomorrow1done"></td>
+                                </tr>
+                                <tr id="tomorrow2">
+                                    <td class="bullet"><img src="img/guarded.svg"></td>
+                                    <td>Jessica R. is due for her weekly check-in.</td>
+                                    <td class="bullet"><input type="checkbox" id="tomorrow2done"></td>
+                                </tr>
+                                <tr id="tomorrow3">
+                                    <td class="bullet"><img src="img/stable.svg"></td>
+                                    <td>James R. is due for his weekly check-in.</td>
+                                    <td class="bullet"><input type="checkbox" id="tomorrow3done"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="large-4 columns">
+        <div class="panel">
+            <h2>Recent Updates</h2>
+
+            <div class="row">
+                <div class="large-2 columns">
+                    <img src="img/updates.svg" align="middle">
+                </div>
+                <div class="large-10 columns">
+                    <table>
+                        <tr id="update1">
+                            <td class="bullet"><img src="img/guarded.svg"></td>
+                            <td>Anthony J. has been diagnosed with high blood pressure.</td>
+                            <td class="bullet"><input type="checkbox" id="update1done"></td>
+                        </tr>
+                        <tr id="update2">
+                            <td class="bullet"><img src="img/stable.svg"></td>
+                            <td>James R. has missed his follow-up appointment.</td>
+                            <td class="bullet"><input type="checkbox" id="update2done"></td>
+                        </tr>
+                        <tr id="update3">
+                            <td class="bullet"><img src="img/stable.svg"></td>
+                            <td>Monica T. is now pregnant.</td>
+                            <td class="bullet"><input type="checkbox" id="update3done"></td>
+                        </tr>
+                        <tr id="update4">
+                            <td class="bullet"><img src="img/stable.svg"></td>
+                            <td>Angus M. now has a new PCP.</td>
+                            <td class="bullet"><input type="checkbox" id="update4done"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="large-4 columns">
+        <div class="panel" data-equalizer-watch>
+            <h2>Social Feed</h2>
+
+            <div class="row">
+                <div class="large-2 columns">
+                    <img src="img/social.svg" align="middle">
+                </div>
+                <div class="large-10 columns">
+                    <table>
+                        <tr>
+                            <th class="bullet"></th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td><img src="img/guarded.svg"></td>
+                            <td>Ryan O. is feeling depressed.</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/stable.svg"></td>
+                            <td>Dominique R.: Sandy, I can't thank you enough!</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<!--Welcome Modal-->
+<div id="welcome" class="reveal-modal" data-reveal>
+    <h1>Welcome!</h1>
+
+    <p>This is a dashboard intended for off-site nurses monitoring their patient populations. The dashboard is intended
+        to feed information in from electronic medical records (EMRs) and from apps used by patients to track doses
+        and post complaints or status updates. The nurse can use the <span class="emphasis">checkboxes</span> ( <input
+                type="checkbox">) to check off
+        any updates and signify her acknowledgment of the information.
+
+    <p>The dashboard includes a Patient List for viewing the entire population sorted by level of severity, which is
+        indicated by a small bullet. After interviewing a few physicians, a color system was created, ranking severity
+        by <span class="emphasis">Critical</span> (<img src="img/critical.svg">), <span class="emphasis">Guarded</span>
+        (<img src="img/guarded.svg">), and <span class="emphasis">Stable</span> (<img src="img/stable.svg">).</p>
+
+    <p>The first patient, <img src="img/patients.svg" width="12px" height="12px"> <span
+            class="emphasis">Jackie C.</span>, is clickable and is an demo of the functionality of
+        pulling up a patient
+        profile. Her full name and and the ability to contact her is included in her profile.</p>
+    <a class="close-reveal-modal">&#215;</a>
+</div>
+
+
+<!--Patient Modal-->
+<div id="JackieC" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+    <h2>Jaquelyn Callahan</h2>
+    <img src="img/jackie-c.jpg" align="middle" float="right">
+
+    <div class="tableRight">
+        <table>
+            <tr>
+                <td><span class="inlineh3">Age:</span> 49</td>
+                <td width="10%"></td>
+                <td><span class="inlineh3">MRN:</span> 23924328</td>
+            </tr>
+            <tr>
+                <td><span class="inlineh3">Primary Diagnosis:</span> COPD</td>
+                <td></td>
+                <td><span class="inlineh3">Cell Phone:</span> (248) 320-1852</td>
+            </tr>
+            <tr>
+                <td><span class="inlineh3">Sex:</span> Female</td>
+                <td></td>
+                <td><span class="inlineh3">Home Phone:</span> (313) 323-5632</td>
+            </tr>
+            <tr>
+                <td><span class="inlineh3">Recent Complaints:</span><br/>Feeling tightness in her chest<br/>Developed a
+                    rash on her abdomen
+                </td>
+                <td></td>
+                <td><span class="inlineh3">Home Address:</span> <br/>3145 Pontiac Trail<br/>West Bloomfield, MI 48323
+                </td>
+            </tr>
+            <tr>
+                <td><span class="inlineh3">Primary Care Physician:</span> Eleanor Roosevelt, MD</td>
+                <td></td>
+                <td><span class="inlineh3">E-mail Address:</span> jcallahan@gmail.com</td>
+            </tr>
+            <tr>
+                <div>
+                    <ul class="small-block-grid-4">
+                        <li><img src="img/chat.svg"></li>
+                        <li><img src="img/email.svg"></li>
+                        <li><img src="img/video.svg"></li>
+                        <li><img src="img/call.svg"></li>
+                    </ul>
+                </div>
+            </tr>
+        </table>
+<!--
+        <div>
+            <h2>Recent Activity</h2>
+            <div class="row">
+                <div class="large-4 small-4 columns">
+                    <ul data-line-id="line">
+                        <li data-y="0" data-x="0">Water Buffalo</li>
+                        <li data-y="10" data-x="10">Bison</li>
+                        <li data-y="20" data-x="20">Bison</li>
+                        <li data-y="30" data-x="30">Bison</li>
+                        <li data-y="35" data-x="40">Bison</li>
+                        <li data-y="50" data-x="200">Bison</li>
+                    </ul>
+                </div>
+                <div class="large-8 small-8 columns">
+                    <div id="line" style="height: 450px;"></div>
+                </div>
+            </div>
+        </div>
+-->
+    </div>
+    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+</div>
+
+<!--Zurb Foundation-->
+<script src="js/vendor/jquery.js"></script>
+<script src="js/foundation.min.js"></script>
+<script type="text/javascript">
+    $(document).foundation();
+</script>
+
+<!--JQuery-->
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<!--Browser Support-->
+<script src="js/vendor/modernizr.js"></script>
+
+<!--Image Carousel-->
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script type="text/javascript">
+    $('.labs').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        arrows: true
+    });
+</script>
+
+<!--Donut Charts-->
+<script src="dist/js/pizza.js"></script>
+<script src="dist/js/vendor/dependencies.js"></script>
+<script type="text/javascript">
+    $(window).load(function () {
+        Pizza.init();
+        $(document).foundation();
+    });
+</script>
+
+<!--Calendar-->
+<script type="text/javascript" src="js/date.js"></script>
+<script type="text/javascript" src="js/foundation_calendar.js"></script>
+<script type="text/javascript" src="js/date-helpers.js"></script>
+<script type="text/javascript" src="js/string-helpers.js"></script>
+
+<!--More Buttons-->
+<script type="text/javascript" src="js/script.js"></script>
+
+<script type="text/javascript">
+    $(document).foundation();
+    $(document).ready(function () {
+        $('#welcome').foundation('reveal', 'open')
+    });
+
+    $(document).ready(function () {
+        $('#appointment1').bind('monthChange', function (evt, opts) {
+        });
+        $('#appointment2').bind('monthChange', function (evt, opts) {
+        });
+        $('#appointment3').bind('monthChange', function (evt, opts) {
+        });
+        $('#appointment4').bind('monthChange', function (evt, opts) {
+        });
+        $('#appointment5').bind('monthChange', function (evt, opts) {
+        });
+    });
+
+    <!--Alerts-->
+    $(document).ready(function () {
+        $('#alert1done').change(function () {
+            if (this.checked)
+                $('#alert1').fadeOut('slow');
+        });
+        $('#alert2done').change(function () {
+            if (this.checked)
+                $('#alert2').fadeOut('slow');
+        });
+        $('#alert3done').change(function () {
+            if (this.checked)
+                $('#alert3').fadeOut('slow');
+        });
+        $('#alert4done').change(function () {
+            if (this.checked)
+                $('#alert4').fadeOut('slow');
+        });
+    });
+
+    <!--Appointment Reminders-->
+    $(document).ready(function () {
+        $('#rem1done').change(function () {
+            if (this.checked)
+                $('#reminder1').fadeOut('slow');
+        });
+        $('#rem2done').change(function () {
+            if (this.checked)
+                $('#reminder2').fadeOut('slow');
+        });
+        $('#rem3done').change(function () {
+            if (this.checked)
+                $('#reminder3').fadeOut('slow');
+        });
+    });
+
+    <!--Patient Check-Ins-->
+    $(document).ready(function () {
+        $('#today1done').change(function () {
+            if (this.checked)
+                $('#today1').fadeOut('slow');
+        });
+        $('#today2done').change(function () {
+            if (this.checked)
+                $('#today2').fadeOut('slow');
+        });
+        $('#today3done').change(function () {
+            if (this.checked)
+                $('#today3').fadeOut('slow');
+        });
+        $('#tomorrow1done').change(function () {
+            if (this.checked)
+                $('#tomorrow1').fadeOut('slow');
+        });
+        $('#tomorrow2done').change(function () {
+            if (this.checked)
+                $('#tomorrow2').fadeOut('slow');
+        });
+        $('#tomorrow3done').change(function () {
+            if (this.checked)
+                $('#tomorrow3').fadeOut('slow');
+        });
+    });
+
+    <!--Recent Updates-->
+    $(document).ready(function () {
+        $('#update1done').change(function () {
+            if (this.checked)
+                $('#update1').fadeOut('slow');
+        });
+        $('#update2done').change(function () {
+            if (this.checked)
+                $('#update2').fadeOut('slow');
+        });
+        $('#update3done').change(function () {
+            if (this.checked)
+                $('#update3').fadeOut('slow');
+        });
+        $('#update4done').change(function () {
+            if (this.checked)
+                $('#update4').fadeOut('slow');
+        });
+    });
+</script>
+
+</body>
+</html>
